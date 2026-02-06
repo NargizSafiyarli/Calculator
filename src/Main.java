@@ -1,13 +1,9 @@
 class Main{
     public static void main(String[] args){
         int score = Integer.parseInt(args[0]);
-        if (args.length == 0) {
-            System.out.println("Usage: java Main <score>");
-            return;
-        }
+
         if (score<1 || score>100){
             System.out.println("Invalid score");
-            return;
         }
         if(score>=90 && score<=100){
             System.out.println("A");
