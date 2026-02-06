@@ -1,19 +1,21 @@
 class Main{
     public static void main(String[] args){
-        int score = Integer.parseInt(args[0]);
-
-        if (score<1 || score>100){
-            System.out.println("Invalid score");
+        int num1=  Integer.parseInt(args[0]);
+        String op= args[1];
+        int num2=  Integer.parseInt(args[2]);
+        int result=0;
+        switch(op){
+            case "+" -> {
+                result = num1+num2;
+            }
+            case "-" -> {result = num1-num2;
+            }
+            case "/" -> {result = num1/num2;
+            }
+            case "*" -> { result = num1*num2;
+            }
         }
-        if(score>=90 && score<=100){
-            System.out.println("A");
-        }else if(score>=80 && score<90){
-            System.out.println("B");
-        } else if (score>=70 && score<80) {
-            System.out.println("C");
-        } else if (score>=60 && score<70) {
-            System.out.println("D");
-        }else System.out.println("F");
+        System.out.println(result);
 
     }
 }
